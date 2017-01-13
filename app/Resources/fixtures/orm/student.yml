@@ -1,0 +1,4 @@
+AppBundle\Entity\Student:
+    student_{1..5}:
+        name: <firstName()> <lastName()>
+        description: 80%? <text(500)>
