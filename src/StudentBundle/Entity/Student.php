@@ -17,6 +17,7 @@ use Doctrine\ORM\Mapping as ORM;
  *
  * @ORM\Entity
  * @ORM\Table(name="student")
+ * @ORM\Entity(repositoryClass="StudentBundle\Repository\StudentRepository")
  */
 class Student
 {
