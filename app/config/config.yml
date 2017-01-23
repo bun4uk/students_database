@@ -19,7 +19,7 @@ framework:
     csrf_protection: ~
     validation:      { enable_annotations: true }
     #serializer:      { enable_annotations: true }
-    templating:vladimir.bunchuk@icloud.com
+    templating:
         engines: ['twig']
     default_locale:  "%locale%"
     trusted_hosts:   ~
