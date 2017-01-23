@@ -15,7 +15,6 @@ use Symfony\Component\Console\Helper\ProgressBar;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
-
 class CreateUserCommand extends ContainerAwareCommand
 {
     use MemoryUsage;
@@ -28,12 +27,12 @@ class CreateUserCommand extends ContainerAwareCommand
      */
     protected function configure()
     {
-        $this->setName('app:create-users')
-            ->setDescription('Creates new users.')
-            ->setHelp('This command allows you to create users...');
+        $this->setName('app:create-students')
+            ->setDescription('Creates students.')
+            ->setHelp('This command allows you to create students...');
     }
 
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function execute(OutputInterface $output)
     {
         $output->writeln($this->getMemoryReport(self::BYTES_IN_MEGABYTES));
         $start_time = microtime(true);

@@ -7,6 +7,7 @@
  */
 
 namespace StudentsBundle\Tests\Controller;
+
 use StudentBundle\Controller\DefaultController;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use Symfony\Component\HttpFoundation\Request;

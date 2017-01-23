@@ -50,5 +50,4 @@ class SlugHelperTest extends WebTestCase
         $result = $slugHelperMock->generateSlug($name);
         $this->assertEquals('volodymyr_bunchuk_2', $result);
     }
-
 }

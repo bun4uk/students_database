@@ -15,12 +15,16 @@ class DefaultController extends Controller
     /**
      * @Route("/", name="homepage")
      */
-    public function indexAction(Request $request)
+    public function indexAction()
     {
 
         $repo = $this->getDoctrine()->getRepository('StudentBundle:Student');
-        dump($repo->getSlugs()); die;
 
+        $students = $repo->findAll();
+
+        return $this->render('default/list.html.twig', [
+            'students' => $students
+        ]);
     }
 
     /**
@@ -43,6 +47,5 @@ class DefaultController extends Controller
         ])
             ->setMaxAge(self::CACHE_TIME)
             ->setSharedMaxAge(self::CACHE_TIME);
-
     }
 }

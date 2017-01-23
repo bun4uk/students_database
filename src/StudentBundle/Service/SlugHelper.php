@@ -20,7 +20,7 @@ class SlugHelper
     protected $duplicates;
 
     public function __construct()
-    {;
+    {
         $this->duplicates = [];
     }
 
