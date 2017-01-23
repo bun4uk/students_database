@@ -1,12 +1,14 @@
 language: php
 php:
   - 7.1
-install: composer install
+install:
+  - composer self-update
+  - composer install
 before_script:
-  - php app/console doctrine:database:create
-  - php app/console doctrine:schema:create
-  - php app/console doctrine:schema:update --force
-  - php app/console app:create-students
+  - php bin/console doctrine:database:create
+  - php bin/console doctrine:schema:update --force
+  - php bin/console h:d:f:l -n --no-debug
+  - php bin/console app:create-students
 script:
   - phpunit -c app
   - php vendor/squizlabs/php_codesniffer/scripts/phpcs --standard=PSR2 src
