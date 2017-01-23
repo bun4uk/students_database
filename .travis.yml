@@ -9,7 +9,7 @@ before_script:
   - php app/console doctrine:schema:update --force --env=test
   - php app/console app:create-students --env=test
 script:
-  - phpunit -c app
+  - vendor/phpunit/phpunit/phpunit -c phpunit.xml.dist src/
   - php vendor/squizlabs/php_codesniffer/scripts/phpcs --standard=PSR2 src
   - php vendor/phpmd/phpmd/src/bin/phpmd src text cleancode,codesize,design,unusedcode
   - php vendor/sebastian/phpcpd/phpcpd src -n -q
