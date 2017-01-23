@@ -32,7 +32,7 @@ class CreateUserCommand extends ContainerAwareCommand
             ->setHelp('This command allows you to create students...');
     }
 
-    protected function execute(OutputInterface $output)
+    protected function execute(InputInterface $input, OutputInterface $output)
     {
         $output->writeln($this->getMemoryReport(self::BYTES_IN_MEGABYTES));
         $start_time = microtime(true);
