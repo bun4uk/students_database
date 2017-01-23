@@ -5,10 +5,9 @@ install:
   - composer self-update
   - composer install
 before_script:
-  - php app/console doctrine:database:create
-  - php app/console doctrine:schema:update --force
-  - php app/console h:d:f:l -n --no-debug
-  - php app/console app:create-students
+  - php app/console doctrine:database:create --env=test
+  - php app/console doctrine:schema:update --force --env=test
+  - php app/console app:create-students --env=test
 script:
   - phpunit -c app
   - php vendor/squizlabs/php_codesniffer/scripts/phpcs --standard=PSR2 src
